@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Libonomy",
-  tagline: "Libonomy Blockchain",
+  tagline: "Dinosaurs are cool",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -28,6 +28,9 @@ module.exports = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
+          type: "docsVersionDropdown",
+        },
+        {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
           position: "right",
@@ -47,6 +50,10 @@ module.exports = {
             {
               label: "Install Go",
               to: "/docs/install-go",
+            },
+            {
+              label: "Cli Commands",
+              to: "/docs/cli-commands",
             },
           ],
         },

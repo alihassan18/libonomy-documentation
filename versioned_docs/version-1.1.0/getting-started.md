@@ -2,8 +2,6 @@
 sidebar_position: 1
 ---
 
-
-
 # Getting Started
 
 <!-- Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**. -->
