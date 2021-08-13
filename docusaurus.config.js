@@ -13,6 +13,21 @@ module.exports = {
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: "YOUR_API_KEY",
+      indexName: "YOUR_INDEX_NAME",
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: see doc section below
+      appId: "YOUR_APP_ID",
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      //... other Algolia params
+    },
     navbar: {
       title: "Libonomy",
       logo: {
