@@ -4,46 +4,49 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Interoperable",
+    Svg: require("../../static/img/molecular.png").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        While other blockchains allow access only to their own ecosystem,
+        Libonomy supports all blockchains.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: "Scalable",
+    Svg: require("../../static/img/arrow.png").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        While other blockchains allow access only to their own ecosystem,
+        Libonomy supports all blockchains.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: "Decentralized and Fair",
+    Svg: require("../../static/img/decent.png").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        While other blockchains allow access only to their own ecosystem,
+        Libonomy supports all blockchains.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+    <div className={clsx("col col--4")}>
+      <div className={styles.featureContainer}>
+        <div className={styles.featureImgContainer}>
+          <img src={Svg} className={styles.featureSvg} alt={title} />
+        </div>
+        <div className={styles.imgMask} />
+        <div className={("text--center padding-horiz--md", styles.featureCard)}>
+          <div className={styles.featureCardTitle}>{title}</div>
+          <p className={styles.featureCardDescription}>{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -53,6 +56,9 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center section-title heading">
+          Libonomy Exclusive Feature{" "}
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

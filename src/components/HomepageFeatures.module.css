@@ -7,7 +7,73 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
+
+.featureImgContainer {
+  width: 64.4px;
+  height: 64.4px;
+  border-radius: 100px;
+  border: solid 1px #1f4bb1;
+  background-color: #e8efff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+}
+
+.featureSvg {
+  height: 32px;
+  width: 30px;
+}
+
+.featureCard {
+  width: 80%;
+  height: 166.5px;
+  padding: 0px 14.8px 0px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 2px #6887cc;
+  background-color: #fff;
+  margin-top: 8px;
+}
+
+.featureCardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #1f4bb1;
+}
+
+.featureCardDescription {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--greyish-brown);
+}
+
+.imgMask {
+  position: absolute;
+  margin: 0px 67px;
+  width: 4px;
+  height: 140px;
+  background: #fff;
+}
+
+@media screen and (max-width: 996px) {
+  .featureCard {
+    width: 100%;
+  }
+}
+
