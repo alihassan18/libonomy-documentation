@@ -68,6 +68,13 @@
   height: 140px;
   background-color: #fff;
 }
+.imgMaskDark {
+  position: absolute;
+  margin: 0px 67px;
+  width: 4px;
+  height: 140px;
+  background-color: #18191a;
+}
 
 @media screen and (max-width: 996px) {
   .featureCard {
