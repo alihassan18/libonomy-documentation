@@ -3,21 +3,21 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
+  title: "Libonomy",
+  tagline: "Documentation",
+  url: "https://libonomy.com/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  favicon: "img/favicon.png",
+  organizationName: "magnus mage", // Usually your GitHub org/user name.
+  projectName: "libonomy", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Site",
+      title: "Libonomy",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Libonomy Logo",
+        src: "img/logo.png",
       },
       items: [
         {
