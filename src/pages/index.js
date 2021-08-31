@@ -44,7 +44,14 @@ function HomepageHeader() {
               </div>
               <div className={styles.btnContainer}>
                 <button className={styles.btnPrimay}>Read doc</button>
-                <button className={styles.btnStart}>Start Tutorial</button>
+                <button className={styles.btnStart}>
+                  <img
+                    src={require("../../static/img/icon-play.png").default}
+                    alt="image"
+                    className={styles.iconPlay}
+                  />
+                  Start Tutorial
+                </button>
               </div>
             </div>
             <div className={clsx("col col--6")}>
