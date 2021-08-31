@@ -56,9 +56,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="text--center section-title heading">
-          Libonomy Exclusive Feature{" "}
-        </div>
+        <div className={styles.sectionTitle}>Libonomy Exclusive Feature </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

@@ -18,7 +18,7 @@
   height: 64.4px;
   border-radius: 100px;
   border: solid 1px #1f4bb1;
-  background-color: #e8efff;
+  /* background-color: #e8efff; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,6 @@
   justify-content: center;
   flex-direction: column;
   border: solid 2px #6887cc;
-  background-color: #fff;
   margin-top: 8px;
 }
 
@@ -60,7 +59,6 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: var(--greyish-brown);
 }
 
 .imgMask {
@@ -68,12 +66,23 @@
   margin: 0px 67px;
   width: 4px;
   height: 140px;
-  background: #fff;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 996px) {
   .featureCard {
     width: 100%;
   }
+}
+
+.sectionTitle {
+  font-size: 25px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 5.48;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: var(--ifm-color-primary);
 }
 
