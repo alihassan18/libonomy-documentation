@@ -49,7 +49,7 @@ function HomepageHeader() {
             </div>
             <div className={clsx("col col--6")}>
               <img
-                src="../../static/img/laptop-img.png"
+                src={require("../../static/img/laptop-img.png").default}
                 alt="image"
                 className={styles.banImage}
               />
