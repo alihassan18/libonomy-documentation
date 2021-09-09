@@ -33,15 +33,15 @@ In practice, the transactions are bundled in blocks to make the process more eff
 
 In a blockchain context, the state machine is deterministic. This means that if a node is started at a given state and replays the same sequence of transactions, it will always end up with the same final state.
 
-The Cosmos SDK gives developers maximum flexibility to define the state of their application, transaction types and state transition functions. The process of building state-machines with the SDK will be described more in depth in the following sections. But first, let us see how the state-machine is replicated using **Tendermint.**
+The Libonomy SDK gives developers maximum flexibility to define the state of their application, transaction types and state transition functions. The process of building state-machines with the SDK will be described more in depth in the following sections. But first, let us see how the state-machine is replicated using **Tendermint.**
 
 ## Tendermint
 
-Thanks to the Cosmos SDK, developers just have to define the state machine, and Tendermint will handle replication over the network for them.
+Thanks to the Libonomy SDK, developers just have to define the state machine, and Tendermint will handle replication over the network for them.
 
 ```
                             ^  +-------------------------------+  ^
-                            |  |                               |  |   Built with Cosmos SDK
+                            |  |                               |  |   Built with   Libonomy SDK
                             |  |  State-machine = Application  |  |
                             |  |                               |  v
                             |  +-------------------------------+
@@ -94,4 +94,4 @@ Here are the most important messages of the ABCI:
 
 Find a more detailed view of the ABCI methods from the Tendermint docs .
 
-Any application built on Tendermint needs to implement the ABCI interface in order to communicate with the underlying local Tendermint engine. Fortunately, you do not have to implement the ABCI interface. The Cosmos SDK provides a boilerplate implementation of it in the form of baseapp.
+Any application built on Tendermint needs to implement the ABCI interface in order to communicate with the underlying local Tendermint engine. Fortunately, you do not have to implement the ABCI interface. The Libonomy SDK provides a boilerplate implementation of it in the form of baseapp.

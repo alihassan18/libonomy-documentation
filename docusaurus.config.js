@@ -20,10 +20,7 @@ module.exports = {
         },
 
         navbar: {
-            logo: {
-                alt: "Libonomy Logo",
-                src: "img/logo1.png",
-            },
+            title: "LIBONOMY",
             items: [
                 {
                     type: "doc",
@@ -33,7 +30,7 @@ module.exports = {
                 },
                 { to: "/blog", label: "Blog", position: "right" },
                 {
-                    href: "https://github.com/facebook/docusaurus",
+                    href: "https://github.com/magnusmage/libonomy-documentation",
                     label: "GitHub",
                     position: "right",
                 },
@@ -41,23 +38,33 @@ module.exports = {
         },
         footer: {
             style: "light",
+
             links: [
                 {
+                    title: "Libonomy",
+                    items: [
+                        {
+                            html: `
+                                <p>Libonomy LTD | 483 Green Lanes, N13 4BS | London United Kingdom
+                                </br>info@libonomy.com</br>
+                                +44 742 458 6677
+                                </p>
+                              `,
+                        },
+                    ],
+                },
+                {
                     title: "Docs",
-                    // items: [
-                    //   {
-                    //     label: "Getting started",
-                    //     to: "/docs/getting-started",
-                    //   },
-                    //   {
-                    //     label: "Install Go",
-                    //     to: "/docs/install-go",
-                    //   },
-                    //   {
-                    //     label: "Cli Commands",
-                    //     to: "/docs/cli-commands",
-                    //   },
-                    // ],
+                    items: [
+                        {
+                            label: "Getting started",
+                            to: "/docs/Introduction/high-level-overview",
+                        },
+                        {
+                            label: "Install Go",
+                            to: "/docs/Introduction/high-level-overview",
+                        },
+                    ],
                 },
                 {
                     title: "Community",
@@ -81,12 +88,13 @@ module.exports = {
                         },
                         {
                             label: "GitHub",
-                            href: "https://github.com/facebook/docusaurus",
+                            href: "https://github.com/magnusmage/libonomy-documentation",
                         },
                     ],
                 },
             ],
-            // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+
+            copyright: "© Libonomy.com (2020). All rights reserved.",
         },
         prism: {
             theme: lightCodeTheme,
@@ -100,12 +108,11 @@ module.exports = {
                 docs: {
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
-                    editUrl: "https://github.com/facebook/docusaurus/edit/master/website/",
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    editUrl: "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+                    editUrl: "https://github.com/magnusmage/libonomy-documentation",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),

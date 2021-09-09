@@ -8,12 +8,12 @@ sidebar_position: 5
          Synopsis
 
          This document describes the default strategies to handle gas and fees within a
-         Cosmos SDK application.
+           Libonomy SDK application.
 ```
 
 ## Introduction to `Gas` and `Fees`
 
-In the Cosmos SDK, `gas` is a special unit that is used to track the consumption of resources during execution. `gas` is typically consumed whenever read and writes are made to the store, but it can also be consumed if expensive computation needs to be done. It serves two main purposes:
+In the Libonomy SDK, `gas` is a special unit that is used to track the consumption of resources during execution. `gas` is typically consumed whenever read and writes are made to the store, but it can also be consumed if expensive computation needs to be done. It serves two main purposes:
 
 -   Make sure blocks are not consuming too many resources and will be finalized. This is implemented by default in the SDK via the block gas meter.
 
@@ -21,7 +21,7 @@ In the Cosmos SDK, `gas` is a special unit that is used to track the consumption
 
 ## Gas Meter
 
-In the Cosmos SDK, `gas` is a simple alias for `uint64`, and is managed by an object called a gas meter. Gas meters implement the `GasMeter` interface
+In the Libonomy SDK, `gas` is a simple alias for `uint64`, and is managed by an object called a gas meter. Gas meters implement the `GasMeter` interface
 
 ```
 // GasMeter interface to track gas consumption
@@ -56,7 +56,7 @@ The gas meter is generally held in `ctx`, and consuming gas is done with the fol
 ctx.GasMeter().ConsumeGas(amount, "description")
 ```
 
-By default, the Cosmos SDK makes use of two different gas meters, the main gas meter and the block gas meter.
+By default, the Libonomy SDK makes use of two different gas meters, the main gas meter and the block gas meter.
 
 ### Main Gas Meter
 
@@ -66,7 +66,7 @@ Gas consumption can be done manually, generally by the module developer in the `
 
 ### Block Gas Meter
 
-`ctx.BlockGasMeter()` is the gas meter used to track gas consumption per block and make sure it does not go above a certain limit. A new instance of the BlockGasMeter is created each time `BeginBlock` is called. The `BlockGasMeter` is finite, and the limit of gas per block is defined in the application's consensus parameters. By default Cosmos SDK applications use the default consensus parameters provided by Tendermint:
+`ctx.BlockGasMeter()` is the gas meter used to track gas consumption per block and make sure it does not go above a certain limit. A new instance of the BlockGasMeter is created each time `BeginBlock` is called. The `BlockGasMeter` is finite, and the limit of gas per block is defined in the application's consensus parameters. By default Libonomy SDK applications use the default consensus parameters provided by Tendermint:
 
 ```
 // DefaultBlockParams returns a default BlockParams.
@@ -89,7 +89,7 @@ ctx.BlockGasMeter().ConsumeGas(
 
 ```
 
-The `anteHandler` is not implemented in the core SDK but in a module. This gives the possibility to developers to choose which version of AnteHandler fits their application's needs. That said, most applications today use the default implementation defined in the `auth` module . Here is what the `anteHandler` is intended to do in a normal Cosmos SDK application:
+The `anteHandler` is not implemented in the core SDK but in a module. This gives the possibility to developers to choose which version of AnteHandler fits their application's needs. That said, most applications today use the default implementation defined in the `auth` module . Here is what the `anteHandler` is intended to do in a normal Libonomy SDK application:
 
 -   Verify that the transaction are of the correct type. Transaction types are defined in the module that implements the `anteHandler`, and they follow the transaction interface:
 

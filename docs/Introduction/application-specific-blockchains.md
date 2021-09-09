@@ -17,7 +17,7 @@ Application-specific blockchains are blockchains customized to operate a single 
 
 ```
                         ^  +-------------------------------+  ^
-                        |  |                               |  |   Built with Cosmos SDK
+                        |  |                               |  |   Built with   Libonomy SDK
                         |  |  State-machine = Application  |  |
                         |  |                               |  v
                         |  +-------------------------------+
@@ -52,9 +52,9 @@ Application-Specific Blockchains are designed to address these shortcomings.
 
 Application-specific blockchains give maximum flexibility to developers:
 
--   In Cosmos blockchains, the state-machine is typically connected to the underlying consensus engine via an interface called the ABCI . This interface can be wrapped in any programming language, meaning developers can build their state-machine in the programming language of their choice.
+-   In Libonomy blockchains, the state-machine is typically connected to the underlying consensus engine via an interface called the ABCI . This interface can be wrapped in any programming language, meaning developers can build their state-machine in the programming language of their choice.
 
--   Developers can choose among multiple frameworks to build their state-machine. The most widely used today is the Cosmos SDK, but others exist (e.g. Lotion , Weave , ...). The choice will most of the time be done based on the programming language they want to use (Cosmos SDK and Weave are in Golang, Lotion is in Javascript, ...).
+-   Developers can choose among multiple frameworks to build their state-machine. The most widely used today is the Libonomy SDK, but others exist (e.g. Lotion , Weave , ...). The choice will most of the time be done based on the programming language they want to use ( Libonomy SDK and Weave are in Golang, Lotion is in Javascript, ...).
 
 -   The ABCI also allows developers to swap the consensus engine of their application-specific blockchain. Today, only Tendermint is production-ready, but in the future other consensus engines are expected to emerge.
 
@@ -62,9 +62,9 @@ Application-specific blockchains give maximum flexibility to developers:
 
 -   Developers are free to explore the full spectrum of tradeoffs (e.g. number of validators vs transaction throughput, safety vs availability in asynchrony, ...) and design choices (DB or IAVL tree for storage, UTXO or account model, ...).
 
--   Developers can implement automatic execution of code. In the Cosmos SDK, logic can be automatically triggered at the beginning and the end of each block. They are also free to choose the cryptographic library used in their application, as opposed to being constrained by what is made available by the underlying environment in the case of virtual-machine blockchains.
+-   Developers can implement automatic execution of code. In the Libonomy SDK, logic can be automatically triggered at the beginning and the end of each block. They are also free to choose the cryptographic library used in their application, as opposed to being constrained by what is made available by the underlying environment in the case of virtual-machine blockchains.
 
-The list above contains a few examples that show how much flexibility application-specific blockchains give to developers. The goal of Cosmos and the Cosmos SDK is to make developer tooling as generic and composable as possible, so that each part of the stack can be forked, tweaked and improved without losing compatibility. As the community grows, more alternatives for each of the core building blocks will emerge, giving more options to developers.
+The list above contains a few examples that show how much flexibility application-specific blockchains give to developers. The goal of Libonomy and the Libonomy SDK is to make developer tooling as generic and composable as possible, so that each part of the stack can be forked, tweaked and improved without losing compatibility. As the community grows, more alternatives for each of the core building blocks will emerge, giving more options to developers.
 
 ## Performance
 

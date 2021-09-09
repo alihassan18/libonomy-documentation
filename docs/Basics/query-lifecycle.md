@@ -51,7 +51,7 @@ replace google.golang.org/grpc => google.golang.org/grpc v1.33.2
 
 -   Please see issue #8392 for more info.
 
-Another interface through which users can make queries, introduced in Cosmos SDK v0.40, is gRPC requests to a gRPC server. The endpoints are defined as Protocol Buffers service methods inside `.proto` files, written in Protobuf's own language-agnostic interface definition language (IDL). The Protobuf ecosystem developed tools for code-generation from` \*.proto` files into various languages. These tools allow to build gRPC clients easily.
+Another interface through which users can make queries, introduced in Libonomy SDK v0.40, is gRPC requests to a gRPC server. The endpoints are defined as Protocol Buffers service methods inside `.proto` files, written in Protobuf's own language-agnostic interface definition language (IDL). The Protobuf ecosystem developed tools for code-generation from` \*.proto` files into various languages. These tools allow to build gRPC clients easily.
 
 One such tool is grpcurl , and a gRPC request for `MyQuery` using this client looks like:
 
@@ -59,10 +59,10 @@ One such tool is grpcurl , and a gRPC request for `MyQuery` using this client lo
 grpcurl \
     -plaintext                                           # We want results in plain test
     -import-path ./proto \                               # Import these .proto files
-    -proto ./proto/cosmos/staking/v1beta1/query.proto \  # Look into this .proto file for the Query protobuf service
+    -proto ./proto/  Libonomy/staking/v1beta1/query.proto \  # Look into this .proto file for the Query protobuf service
     -d '{"address":"$MY_DELEGATOR"}' \                   # Query arguments
     localhost:9090 \                                     # gRPC server endpoint
-    cosmos.staking.v1beta1.Query/Delegations             # Fully-qualified service method name
+      Libonomy.staking.v1beta1.Query/Delegations             # Fully-qualified service method name
 
 ```
 
@@ -73,7 +73,7 @@ Another interface through which users can make queries is through HTTP Requests 
 An example HTTP request for `MyQuery` looks like:
 
 ```
-GET http://localhost:1317/cosmos/staking/v1beta1/delegators/{delegatorAddr}/delegations
+GET http://localhost:1317/  Libonomy/staking/v1beta1/delegators/{delegatorAddr}/delegations
 ```
 
 ## How Queries are Handled by the CLI
@@ -183,7 +183,7 @@ The SDK leverages code generated from Protobuf services to make queries. The `st
 			}
 ```
 
-Under the hood, the `client.Context` has a `Query()` function used to retrieve the pre-configured node and relay a query to it; the function takes the query fully-qualified service method name as path (in our case: `/cosmos.staking.v1beta1.Query/Delegations`), and arguments as parameters. It first retrieves the RPC Client (called the node) configured by the user to relay this query to, and creates the `ABCIQueryOptions` (parameters formatted for the ABCI call). The node is then used to make the ABCI call, `ABCIQueryWithOptions()`.
+Under the hood, the `client.Context` has a `Query()` function used to retrieve the pre-configured node and relay a query to it; the function takes the query fully-qualified service method name as path (in our case: `/ Libonomy.staking.v1beta1.Query/Delegations`), and arguments as parameters. It first retrieves the RPC Client (called the node) configured by the user to relay this query to, and creates the `ABCIQueryOptions` (parameters formatted for the ABCI call). The node is then used to make the ABCI call, `ABCIQueryWithOptions()`.
 
 Here is what the code looks like:
 
@@ -221,7 +221,7 @@ func (ctx Context) queryABCI(req abci.RequestQuery) (abci.ResponseQuery, error) 
 
 With a call to `ABCIQueryWithOptions()`, `MyQuery` is received by a full-node which will then process the request. Note that, while the RPC is made to the consensus engine (e.g. Tendermint Core) of a full-node, queries are not part of consensus and will not be broadcasted to the rest of the network, as they do not require anything the network needs to agree upon.
 
-Read more about ABCI Clients and Tendermint RPC in the Tendermint documentation here (opens new window).
+Read more about ABCI Clients and Tendermint RPC in the Tendermint documentation here .
 
 ## Application Query Handling
 
@@ -229,13 +229,13 @@ When a query is received by the full-node after it has been relayed from the und
 
 Apart from gRPC routes, `baseapp` also handles four different types of queries: `app`, `store`, `p2p`, and `custom`. The first three types (`app`, `store`, `p2p`) are purely application-level and thus directly handled by `baseapp` or the stores, but the `custom` query type requires baseapp to route the query to a module's legacy queriers. To learn more about these queries, please refer to this guide.
 
-Since `MyQuery` has a Protobuf fully-qualified service method name from the `staking` module (recall `/cosmos.staking.v1beta1.Query/Delegations`), `baseapp` first parses the path, then uses its own internal GRPCQueryRouter to retrieve the corresponding gRPC handler, and routes the query to the module. The gRPC handler is responsible for recognizing this query, retrieving the appropriate values from the application's stores, and returning a response. Read more about query services here.
+Since `MyQuery` has a Protobuf fully-qualified service method name from the `staking` module (recall `/ Libonomy.staking.v1beta1.Query/Delegations`), `baseapp` first parses the path, then uses its own internal GRPCQueryRouter to retrieve the corresponding gRPC handler, and routes the query to the module. The gRPC handler is responsible for recognizing this query, retrieving the appropriate values from the application's stores, and returning a response. Read more about query services here.
 
 Once a result is received from the querier, baseapp begins the process of returning a response to the user.
 
 ## Response
 
-Since `Query()` is an ABCI function, `baseapp` returns the response as an `abci.ResponseQuery` (opens new window)type. The `client.Context` `Query()` routine receives the response and.
+Since `Query()` is an ABCI function, `baseapp` returns the response as an `abci.ResponseQuery` type. The `client.Context` `Query()` routine receives the response and.
 
 ### CLI Response
 

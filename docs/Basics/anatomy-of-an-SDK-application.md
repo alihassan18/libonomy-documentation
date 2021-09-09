@@ -7,7 +7,7 @@ sidebar_position: 1
 ```
          Synopsis
 
-         This document describes the core parts of a Cosmos SDK application. Throughout
+         This document describes the core parts of a   Libonomy SDK application. Throughout
          the document, a placeholder application named app will be used.
 ```
 
@@ -19,7 +19,7 @@ The Daemon, or Full-Node Client, is the core process of an SDK-based blockchain.
                 ^  +-------------------------------+  ^
                 |  |                               |  |
                 |  |  State-machine = Application  |  |
-                |  |                               |  |   Built with Cosmos SDK
+                |  |                               |  |   Built with   Libonomy SDK
                 |  |            ^      +           |  |
                 |  +----------- | ABCI | ----------+  v
                 |  |            +      v           |  ^
@@ -52,7 +52,7 @@ The first thing defined in app.go is the type of the application. It is generall
 
 -   **A reference to `baseapp`.** The custom application defined in app.go is an extension of baseapp. When a transaction is relayed by Tendermint to the application, app uses baseapp's methods to route them to the appropriate module. baseapp implements most of the core logic for the application, including all the ABCI methods and the routing logic.
 
--   **A list of store keys.** The store, which contains the entire state, is implemented as a multistore (i.e. a store of stores) in the Cosmos SDK. Each module uses one or multiple stores in the multistore to persist their part of the state. These stores can be accessed with specific keys that are declared in the app type. These keys, along with the keepers, are at the heart of the object-capabilities model of the Cosmos SDK.
+-   **A list of store keys.** The store, which contains the entire state, is implemented as a multistore (i.e. a store of stores) in the Libonomy SDK. Each module uses one or multiple stores in the multistore to persist their part of the state. These stores can be accessed with specific keys that are declared in the app type. These keys, along with the keepers, are at the heart of the object-capabilities model of the Libonomy SDK.
 
 -   **A list of module's `keeper`s.** Each module defines an abstraction called keeper, which handles reads and writes for this module's store(s). The keeper's methods of one module can be called from other modules (if authorized), which is why they are declared in the application's type and exported as interfaces to other modules so that the latter can only access the authorized functions.
 
@@ -493,7 +493,7 @@ Modules are the heart and soul of SDK applications. They can be considered as st
 
 ## Application Module Interface
 
-Modules must implement interfaces defined in the Cosmos SDK, `AppModuleBasic` and `AppModule`. The former implements basic non-dependant elements of the module, such as the `codec`, while the latter handles the bulk of the module methods (including methods that require references to other modules' `keeper`s). Both the `AppModule` and `AppModuleBasic` types are defined in a file called `./module.go.`
+Modules must implement interfaces defined in the Libonomy SDK, `AppModuleBasic` and `AppModule`. The former implements basic non-dependant elements of the module, such as the `codec`, while the latter handles the bulk of the module methods (including methods that require references to other modules' `keeper`s). Both the `AppModule` and `AppModuleBasic` types are defined in a file called `./module.go.`
 
 `AppModule` exposes a collection of useful methods on the module that facilitates the composition of modules into a coherent application. These methods are are called from the `module manager`(../building-modules/module-manager.md#manager), which manages the application's collection of modules.
 
@@ -542,7 +542,7 @@ Finally, each module should also implement the `RegisterServices` method as part
 
 ## Keeper
 
-`Keepers` are the gatekeepers of their module's store(s). To read or write in a module's store, it is mandatory to go through one of its `keeper`'s methods. This is ensured by the object-capabilities model of the Cosmos SDK. Only objects that hold the key to a store can access it, and only the module's `keeper` should hold the key(s) to the module's store(s).
+`Keepers` are the gatekeepers of their module's store(s). To read or write in a module's store, it is mandatory to go through one of its `keeper`'s methods. This is ensured by the object-capabilities model of the Libonomy SDK. Only objects that hold the key to a store can access it, and only the module's `keeper` should hold the key(s) to the module's store(s).
 
 `Keepers` are generally defined in a file called `keeper.go`. It contains the `keeper`'s type definition and methods.
 
@@ -582,7 +582,7 @@ Each module can expose gRPC endpoints, called service methods and are defined in
 
 Some external clients may not wish to use gRPC. The SDK provides in this case a gRPC gateway service, which exposes each gRPC service as a correspoding REST endpoint. Please refer to the grpc-gateway documentation to learn more.
 
-The REST endpoints are defined in the Protobuf files, along with the gRPC services, using Protobuf annotations. Modules that want to expose REST queries should add `google.api.http` annotations to their rpc methods. By default, all REST endpoints defined in the SDK have an URL starting with the /`cosmos`/ prefix.
+The REST endpoints are defined in the Protobuf files, along with the gRPC services, using Protobuf annotations. Modules that want to expose REST queries should add `google.api.http` annotations to their rpc methods. By default, all REST endpoints defined in the SDK have an URL starting with the /` Libonomy`/ prefix.
 
 The SDK also provides a development endpoint to generate Swagger definition files for these REST endpoints. This endpoint can be enabled inside the `app.toml` config file, under the `api.swagger` key.
 
@@ -592,7 +592,7 @@ The module's Legacy REST interface lets users generate transactions and query th
 
 -   A `RegisterRoutes` function, which registers each route defined in the file. This function is called from the main application's interface for each module used within the application. The router used in the SDK is Gorilla's mux .
 
--   Custom request type definitions for each query or transaction creation function that needs to be exposed. These custom request types build on the base `request` type of the Cosmos SDK:
+-   Custom request type definitions for each query or transaction creation function that needs to be exposed. These custom request types build on the base `request` type of the Libonomy SDK:
 
 ```
 // BaseReq defines a structure that can be embedded in other request structures
@@ -637,16 +637,16 @@ import (
 	"os"
 	"path"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/keys"
-	"github.com/cosmos/cosmos-sdk/client/lcd"
-	"github.com/cosmos/cosmos-sdk/client/rpc"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/version"
-	authcmd "github.com/cosmos/cosmos-sdk/x/auth/client/cli"
-	authrest "github.com/cosmos/cosmos-sdk/x/auth/client/rest"
-	bankcmd "github.com/cosmos/cosmos-sdk/x/bank/client/cli"
-	app "github.com/cosmos/sdk-tutorials/nameservice"
+	"github.com/  Libonomy/  Libonomy-sdk/client"
+	"github.com/  Libonomy/  Libonomy-sdk/client/keys"
+	"github.com/  Libonomy/  Libonomy-sdk/client/lcd"
+	"github.com/  Libonomy/  Libonomy-sdk/client/rpc"
+	sdk "github.com/  Libonomy/  Libonomy-sdk/types"
+	"github.com/  Libonomy/  Libonomy-sdk/version"
+	authcmd "github.com/  Libonomy/  Libonomy-sdk/x/auth/client/cli"
+	authrest "github.com/  Libonomy/  Libonomy-sdk/x/auth/client/rest"
+	bankcmd "github.com/  Libonomy/  Libonomy-sdk/x/bank/client/cli"
+	app "github.com/  Libonomy/sdk-tutorials/nameservice"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	amino "github.com/tendermint/go-amino"
@@ -791,12 +791,12 @@ Please see issue #8392 for more info.
 This section is optional, as developers are free to choose their dependency manager and project building method. That said, the current most used framework for versioning control is `go.mod`. It ensures each of the libraries used throughout the application are imported with the correct version. See an example from the nameservice tutorial :
 
 ```
-module github.com/cosmos/sdk-application-tutorial
+module github.com/  Libonomy/sdk-application-tutorial
 
 go 1.13
 
 require (
-	github.com/cosmos/cosmos-sdk v0.37.3
+	github.com/  Libonomy/  Libonomy-sdk v0.37.3
 	github.com/gorilla/mux v1.7.3
 	github.com/mattn/go-isatty v0.0.7 // indirect
 	github.com/spf13/afero v1.2.2 // indirect
@@ -819,11 +819,11 @@ PACKAGES=$(shell go list ./... | grep -v '/simulation')
 VERSION := $(shell echo $(shell git describe --tags) | sed 's/^v//')
 COMMIT := $(shell git log -1 --format='%H')
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=NameService \
-	-X github.com/cosmos/cosmos-sdk/version.ServerName=nsd \
-	-X github.com/cosmos/cosmos-sdk/version.ClientName=nscli \
-	-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
-	-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT)
+ldflags = -X github.com/  Libonomy/  Libonomy-sdk/version.Name=NameService \
+	-X github.com/  Libonomy/  Libonomy-sdk/version.ServerName=nsd \
+	-X github.com/  Libonomy/  Libonomy-sdk/version.ClientName=nscli \
+	-X github.com/  Libonomy/  Libonomy-sdk/version.Version=$(VERSION) \
+	-X github.com/  Libonomy/  Libonomy-sdk/version.Commit=$(COMMIT)
 
 BUILD_FLAGS := -ldflags '$(ldflags)'
 
