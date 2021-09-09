@@ -1,14 +1,14 @@
 ---
 slug: hello-world
 title: Hello
-author: Endilie Yacop Sucipto
-author_title: Maintainer of Docusaurus
-author_url: https://github.com/endiliey
-author_image_url: https://avatars1.githubusercontent.com/u/17883920?s=460&v=4
-tags: [hello, docusaurus]
+author: Muhammad Anas
+author_title: Core Team Member
+author_url: https://github.com/anasbashir
+author_image_url: /img/anas.png
+tags: [hello, facebook]
 ---
 
-Welcome to this blog. This blog is created with [**Docusaurus 2**](https://docusaurus.io/).
+Welcome to this blog.
 
 <!--truncate-->
 

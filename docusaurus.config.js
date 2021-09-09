@@ -20,7 +20,11 @@ module.exports = {
         },
 
         navbar: {
-            title: "LIBONOMY",
+            // title: "LIBONOMY",
+            logo: {
+                alt: "Libonomy Logo",
+                src: "img/logo1.png",
+            },
             items: [
                 {
                     type: "doc",

@@ -115,6 +115,24 @@
     .features {
         margin-top: 6rem;
     }
+    .sectionTitleLight {
+        line-height: 1 !important;
+        margin: 100px 0px;
+    }
+    .sectionTitleDark {
+        line-height: 1 !important;
+        margin: 100px 0px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .sectionTitleLight {
+        line-height: 1 !important;
+        margin: 180px 0px 100px 0px;
+    }
+    .sectionTitleDark {
+        line-height: 1 !important;
+        margin: 180px 0px 100px 0px;
+    }
 }
 
 .sectionTitleLight {
