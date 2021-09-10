@@ -229,3 +229,21 @@ html[data-theme="dark"] .navbar__title {
     font-weight: 500;
     color: #1f4bb1;
 }
+
+html[data-theme="dark"] .avatar__name a {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .text--right a {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .margin-horiz--sm {
+    color: #ccdde2;
+}
+html[data-theme="dark"]
+    .blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module
+    a {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .margin-top--sm a {
+    color: #ccdde2;
+}
