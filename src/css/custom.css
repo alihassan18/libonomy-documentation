@@ -7,23 +7,243 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #1f4bb1;
-  --ifm-color-primary-dark: #18191a;
-  --ifm-color-primary-darker: #18191a;
-  --ifm-color-primary-darkest: #18191a;
-  --ifm-color-primary-light: #18191a;
-  --ifm-color-primary-lighter: #18191a;
-  --ifm-color-primary-lightest: #18191a;
-  --ifm-code-font-size: 95%;
+    --ifm-color-primary: #1f4bb1;
+    --ifm-color-primary-dark: #18191a;
+    --ifm-color-primary-darker: #18191a;
+    --ifm-color-primary-darkest: #18191a;
+    --ifm-color-primary-light: #18191a;
+    --ifm-color-primary-lighter: #18191a;
+    --ifm-color-primary-lightest: #18191a;
+    --ifm-code-font-size: 95%;
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* 
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: var(--ifm-navbar-link-hover-color);
+    text-decoration: none;
+}
+.navbar__link {
+    color: var(--ifm-navbar-link-hover-color);
+    font-weight: var(--ifm-font-weight-semibold);
+    padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+}
+.navbar--fixed-top {
+    padding: 0 110px;
+}
+@media (max-width: 997px) {
+    .navbar--fixed-top {
+        padding: 0px 40px;
+    }
+    .navbar__logo {
+        display: none;
+    }
+    .navbar-sidebar__brand {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar__items {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+} */
+
+.navbar__logo {
+    height: 16px;
+    object-fit: contain;
+    margin-right: 0px;
+}
+.navbar__link:hover,
+.navbar__link--active {
+    color: var(--ifm-navbar-link-hover-color);
+    text-decoration: none;
+}
+html[data-theme="dark"] .navbar__link {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .navbar {
+    background-color: #303846;
+}
+
+.navbar__link {
+    color: var(--ifm-navbar-link-hover-color);
+    font-weight: var(--ifm-font-weight-semibold);
+    padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+}
+@media (max-width: 997px) {
+    .navbar--fixed-top {
+        padding: 0px 40px;
+    }
+    .navbar__logo {
+        display: none;
+    }
+    .navbar-sidebar__brand {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar__items {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+.col.footer__col {
+    margin-left: 40px;
+}
+.footer__links {
+    width: 1400px;
+}
+
+@media (max-width: 1480px) {
+    .footer__links {
+        width: 100%;
+    }
+}
+
+/* left Sidebar */
+html[data-theme="dark"] .menu__link {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .menu__link--active {
+    background-color: #303846;
+}
+html[data-theme="dark"] .menu__link:hover {
+    background: #303846;
+    color: #ccdde2;
+}
+
+/* next and previous */
+html[data-theme="dark"] .pagination-nav__link {
+    border: 1px solid #303846;
+}
+html[data-theme="dark"] .pagination-nav__item + .pagination-nav__item--next .pagination-nav__link {
+    background-color: #303846 !important;
+}
+html[data-theme="dark"] .pagination-nav__label {
+    color: #ccdde2;
+}
+
+/* Right Sidebar */
+html[data-theme="dark"] .table-of-contents__link {
+    color: #ccdde2;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+}
+html[data-theme="dark"] .table-of-contents__link:hover,
+html[data-theme="dark"] .table-of-contents__link:hover code,
+html[data-theme="dark"] .table-of-contents__link--active,
+html[data-theme="dark"] .table-of-contents__link--active code {
+    background-color: #303846;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Bottom to top */
+html[data-theme="dark"]
+    .backToTopButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-BackToTopButton-styles-module {
+    background-color: #303846 !important;
+}
+
+/* Doc Text */
+html[data-theme="dark"]
+    .docPage_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module,
+html[data-theme="dark"]
+    .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
+    color: #ccdde2 !important;
+}
+
+/* footer */
+
+.footer__title {
+    color: #1f4bb1;
+}
+.footer__link-item {
+    color: #464646;
+}
+.footer__items .footer__item p {
+    color: #464646;
+}
+.footer__copyright {
+    color: #464646;
+}
+html[data-theme="dark"] .footer__title {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .footer__link-item {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .footer__items .footer__item p {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .footer__copyright {
+    color: #ccdde2;
+}
+
+html[data-theme="dark"] .hash-link {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .hash-link:hover {
+    color: #ccdde2;
+}
+html[data-theme="dark"] code {
+    background-color: #303846 !important;
+    color: #ccdde2;
+}
+html[data-theme="dark"]
+    pre.prism-code.language-undefined.codeBlock_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module.thin-scrollbar {
+    background-color: #303846 !important;
+}
+html[data-theme="dark"] .navbar__title {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ccdde2;
+}
+.navbar__title {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: 500;
+    color: #1f4bb1;
+}
+
+html[data-theme="dark"] .avatar__name a {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .text--right a {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .margin-horiz--sm {
+    color: #ccdde2;
+}
+html[data-theme="dark"]
+    .blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module
+    a {
+    color: #ccdde2;
+}
+html[data-theme="dark"] .margin-top--sm a {
+    color: #ccdde2;
 }

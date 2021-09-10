@@ -1,108 +1,200 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
+import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
-
+import useThemeContext from "@theme/hooks/useThemeContext";
+import { Link } from "react-router-dom";
+// function Feature({ Svg, title, description, isDarkTheme }) {
+//     return (
+//         <div className={clsx("col col--4")}>
+//             <div className={styles.featureContainer}>
+//                 <div className={styles.featureImgContainer}>
+//                     <img src={Svg} className={styles.featureSvg} alt={title} />
+//                 </div>
+//                 <div className={isDarkTheme ? styles.imgMaskDark : styles.imgMask} />
+//                 <div className={("text--center padding-horiz--md", styles.featureCard)}>
+//                     <div className={styles.featureCardTitle}>{title}</div>
+//                     <p className={styles.featureCardDescription}>{description}</p>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    // <header className={clsx("hero hero--primary", styles.heroBanner)}>
-    //   <div className="container">
-    //     <h1 className="hero__title">{siteConfig.title}</h1>
-    //     <p className="hero__subtitle">{siteConfig.tagline}</p>
-    //     <div className={styles.buttons}>
-    //       <Link
-    //         className="button button--secondary button--lg"
-    //         to="/docs/getting-started"
-    //       >
-    //         Libonomy Tutorial - 5min ⏱️
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </header>
+    const { siteConfig } = useDocusaurusContext();
 
-    <div className={clsx(styles.heroBanner)}>
-      <div className="container">
-        <div className={clsx(styles.bannerSection)}>
-          <div className={(clsx("col col--6"), styles.bannerContent)}>
-            <div className={styles.bannerContentWrapper}>
-              <div className={styles.title}>Become a master</div>
-              <div className={styles.subHeading}>Documentation for the</div>
-              <div className={styles.heading}>Libonomy Blockchain</div>
-              <div className={styles.description}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </div>
-              <div className={styles.btnContainer}>
-                <button className={styles.btnPrimay}>Read doc</button>
-                <button className={styles.btnStart}>
-                  <img
-                    src={require("../../static/img/icon-play.png").default}
-                    alt="image"
-                    className={styles.iconPlay}
-                  />
-                  Start Tutorial
-                </button>
-              </div>
+    const { isDarkTheme, setLightTheme, setDarkTheme } = useThemeContext();
+    return (
+        <div className={clsx(styles.heroBanner)}>
+            <div className="container">
+                <div className={clsx(styles.bannerSection)}>
+                    <div className={(clsx("col col-md-8"), styles.bannerContent)}>
+                        <div className={styles.bannerContentWrapper}>
+                            <div className={isDarkTheme ? styles.titleDark : styles.titleLight}>
+                                Enhance your skills
+                            </div>
+                            <div
+                                className={
+                                    isDarkTheme ? styles.descriptionDark : styles.descriptionLight
+                                }>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat
+                            </div>
+                            <div className={isDarkTheme ? styles.headingDark : styles.headingLight}>
+                                Libonomy-DOC
+                            </div>
+                            <div className={styles.end}>
+                                <div
+                                    className={
+                                        isDarkTheme ? styles.subHeadingDark : styles.subHeadingLight
+                                    }>
+                                    Quick Guide
+                                </div>
+                            </div>
+                            <div className={styles.btnContainer}>
+                                <div
+                                    className={
+                                        isDarkTheme ? styles.btnPrimayDark : styles.btnPrimayLight
+                                    }>
+                                    {isDarkTheme ? (
+                                        <Link to="/docs/Introduction/high-level-overview">
+                                            <img
+                                                src={
+                                                    require("../../static/img/bookDark.png").default
+                                                }
+                                                alt="image"
+                                                className={styles.iconPlay}
+                                            />
+                                        </Link>
+                                    ) : (
+                                        <Link to="/docs/Introduction/high-level-overview">
+                                            <img
+                                                src={
+                                                    require("../../static/img/bookLight.png")
+                                                        .default
+                                                }
+                                                alt="image"
+                                                className={styles.iconPlay}
+                                            />
+                                        </Link>
+                                    )}
+                                    Read doc
+                                </div>
+                                <div
+                                    className={
+                                        isDarkTheme ? styles.btnPrimayDark : styles.btnPrimayLight
+                                    }>
+                                    {isDarkTheme ? (
+                                        <Link to="/">
+                                            <img
+                                                src={
+                                                    require("../../static/img/playDark.png").default
+                                                }
+                                                alt="image"
+                                                className={styles.iconPlay}
+                                            />
+                                        </Link>
+                                    ) : (
+                                        <Link to="/">
+                                            <img
+                                                src={
+                                                    require("../../static/img/playLight.png")
+                                                        .default
+                                                }
+                                                alt="image"
+                                                className={styles.iconPlay}
+                                            />
+                                        </Link>
+                                    )}
+                                    Start Tutorial
+                                </div>
+                            </div>
+                        </div>
+                        <div className={clsx("col col--6")}>
+                            {isDarkTheme ? (
+                                <img
+                                    src={require("../../static/img/personDark.png").default}
+                                    alt="image"
+                                    className={styles.banImage}
+                                />
+                            ) : (
+                                <img
+                                    src={require("../../static/img/personLight.png").default}
+                                    alt="image"
+                                    className={styles.banImage}
+                                />
+                            )}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className={clsx("col col--6")}>
-              <img
-                src={require("../../static/img/laptop-img.png").default}
-                alt="image"
-                className={styles.banImage}
-              />
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 function SubscribeNow() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <div className={clsx(styles.subscibeWrapper)}>
-      <div className="container">
-        <div className={styles.subscribeContent}>
-          <div>
-            <div className={styles.subscribetitle}>Subscrible now</div>
-            <div className={styles.subscribeHeading}>
-              Get every single update you will get
+    const { siteConfig } = useDocusaurusContext();
+    const { isDarkTheme } = useThemeContext();
+    return (
+        <div
+            className={
+                isDarkTheme ? clsx(styles.subscibeWrapperDark) : clsx(styles.subscibeWrapperLight)
+            }>
+            <div className="container">
+                <div className={styles.subscribeContent}>
+                    <div>
+                        <div
+                            className={
+                                isDarkTheme ? styles.subscribetitleDark : styles.subscribetitleLight
+                            }>
+                            Subscribe now!
+                        </div>
+                        <div
+                            className={
+                                isDarkTheme
+                                    ? styles.subscribeHeadingDark
+                                    : styles.subscribeHeadingLight
+                            }>
+                            Get our latest News and Docs in your INBOX.
+                        </div>
+                    </div>
+                    <div>
+                        <input
+                            placeholder="Enter email address"
+                            className={
+                                isDarkTheme ? styles.subscribeInputDark : styles.subscribeInputLight
+                            }
+                        />
+                        <button
+                            className={
+                                isDarkTheme
+                                    ? styles.subscribeButtonDark
+                                    : styles.subscribeButtonLight
+                            }>
+                            Subscrible now
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div>
-            <input
-              placeholder="Enter email address"
-              className={styles.subscribeInput}
-            />
-            <button className={styles.subscribeButton}>Subscrible now</button>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <>
-      <Layout
-        // title={`${siteConfig.title}`}
-        description="Description will go into a meta tag in <head />"
-      >
-        <HomepageHeader />
-        <HomepageFeatures />
-        <SubscribeNow />
-      </Layout>
-    </>
-  );
+    const { siteConfig } = useDocusaurusContext();
+    return (
+        <>
+            <Layout
+                // title={`${siteConfig.title}`}
+                description="Description will go into a meta tag in <head />">
+                <HomepageHeader />
+                <HomepageFeatures />
+                <SubscribeNow />
+            </Layout>
+        </>
+    );
 }
