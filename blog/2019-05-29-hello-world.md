@@ -4,7 +4,7 @@ title: Hello
 author: Muhammad Anas
 author_title: Core Team Member
 author_url: https://github.com/anasbashir
-author_image_url: /img/anas.png
+author_image_url: /img/anas.jpg
 tags: [hello, facebook]
 ---
 
