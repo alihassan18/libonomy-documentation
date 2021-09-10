@@ -34,7 +34,7 @@ module.exports = {
                 },
                 { to: "/blog", label: "Blog", position: "right" },
                 {
-                    href: "https://github.com/magnusmage/libonomy-documentation",
+                    href: "https://github.com/libonomy",
                     label: "GitHub",
                     position: "right",
                 },
@@ -92,7 +92,7 @@ module.exports = {
                         },
                         {
                             label: "GitHub",
-                            href: "https://github.com/magnusmage/libonomy-documentation",
+                            href: "https://github.com/libonomy",
                         },
                     ],
                 },
@@ -116,7 +116,7 @@ module.exports = {
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    editUrl: "https://github.com/magnusmage/libonomy-documentation",
+                    editUrl: "https://github.com/libonomy",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
