@@ -3,14 +3,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-    title: "Libonomy",
+    title: "Libonomy Documentation | Libonomy Documentation",
     tagline: "Documentation",
     url: "https://libonomy.com/",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.png",
-    organizationName: "magnus mage", // Usually your GitHub org/user name.
+    organizationName: "Libonomy", // Usually your GitHub org/user name.
     projectName: "libonomy", // Usually your repo name.
     themeConfig: {
         colorMode: {
@@ -30,9 +30,9 @@ module.exports = {
                     type: "doc",
                     docId: "Introduction/high-level-overview",
                     position: "right",
-                    label: "Introduction",
+                    label: "Quick Start",
                 },
-                { to: "/blog", label: "Blog", position: "right" },
+                // { to: "/blog", label: "Blog", position: "right" },
                 {
                     href: "https://github.com/libonomy",
                     label: "GitHub",
@@ -61,12 +61,12 @@ module.exports = {
                     title: "Docs",
                     items: [
                         {
-                            label: "Getting started",
+                            label: "Quick Start",
                             to: "/docs/Introduction/high-level-overview",
                         },
                         {
-                            label: "Install Go",
-                            to: "/docs/Introduction/high-level-overview",
+                            label: "Installation",
+                            to: "/docs/install-go",
                         },
                     ],
                 },
@@ -86,10 +86,10 @@ module.exports = {
                 {
                     title: "More",
                     items: [
-                        {
-                            label: "Blog",
-                            to: "/blog",
-                        },
+                        // {
+                        //     label: "Blog",
+                        //     to: "/blog",
+                        // },
                         {
                             label: "GitHub",
                             href: "https://github.com/libonomy",
@@ -98,7 +98,7 @@ module.exports = {
                 },
             ],
 
-            copyright: "© Libonomy.com (2020). All rights reserved.",
+            copyright: "© Libonomy (2021). All rights reserved.",
         },
         prism: {
             theme: lightCodeTheme,

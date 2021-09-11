@@ -2,36 +2,52 @@
 sidebar_position: 1
 ---
 
-# High-level Overview
+# Overview
 
-## What is the SDK?
+## What is Libonomy ?
 
-The Libonomy-SDK is an open-source framework for building multi-asset public Proof-of-Stake (PoS) blockchains, like the Libonomy Hub, as well as permissioned Proof-Of-Authority (PoA) blockchains. Blockchains built with the Libonomy SDK are generally referred to as **application-specific blockchains.**
+Libonomy is a next-gen blockchain, one that presents a realistic solution for mass adoption – autonomous, completely decentralized, secure, and can provide high scalability and efficiency in a real-world environment.
 
-The goal of the Libonomy SDK is to allow developers to easily create custom blockchains from scratch that can natively interoperate with other blockchains. We envision the SDK as the npm-like framework to build secure blockchain applications on top of Tendermint . SDK-based blockchains are built out of composable modules, most of which are open source and readily available for any developers to use. Anyone can create a module for the Libonomy-SDK, and integrating already-built modules is as simple as importing them into your blockchain application. What's more, the Libonomy SDK is a capabilities-based system, which allows developers to better reason about the security of interactions between modules. For a deeper look at capabilities, jump to this section.
+Libonomy is built so that the people today and the generations to come can utilize the best that the blockchain technology has to offer in an environment that is as simple as any mobile or desktop application, has no limitations, and can continuously adapt to fulfill all the ever-changing technology requirements.
 
-## What are Application-Specific Blockchains?
+It is all possible with the introduction of Libonomy’s artificial intelligence-governed engine and reinvented blockchain’s architecture, which helps to eliminate all the major issues of decentralized technology that are present in all of the former blockchains – low speed, poor efficiency, many security concerns, lack of usability, insufficient scalability, poor connectivity and inflexibility.
 
-One development paradigm in the blockchain world today is that of virtual-machine blockchains like Ethereum, where development generally revolves around building a decentralised applications on top of an existing blockchain as a set of smart contracts. While smart contracts can be very good for some use cases like single-use applications (e.g. ICOs), they often fall short for building complex decentralised platforms. More generally, smart contracts can be limiting in terms of flexibility, sovereignty and performance.
+This technology is meant for enterprises as much as it’s meant for general society – it provides a strong, robust and versatile network that can be utilized by anyone. Tools like decentralized multi-currency wallet, one-click applications, file storage, multilingual development kit and many others will help to gain more and more awareness. On top of that, Libonomy is the first to present a decentralized interoperability solution, in other words: connections between different technologies will be one of the most demanding factors in 2021 and years to come.
 
-Application-specific blockchains offer a radically different development paradigm than virtual-machine blockchains. An application-specific blockchain is a blockchain customized to operate a single application: developers have all the freedom to make the design decisions required for the application to run optimally. They can also provide better sovereignty, security and performance.
+### Eco-system For Developers
 
-Learn more about application-specific blockchains.
+Libonomy is an AI driven autonomous blockchain with all-around improved performance. It’s **scalable**, **autonomous** and **layer-1 interoperable**. It connects other blockchain together and is the first universal solution that can be used to create any private, public or hybrid blockchain project. Libonomy simplifies development experience with easy-to-use blockchain development tools for developers, and provides a variety of services for developers to realize their maximum potential.
 
-## Why the Libonomy SDK?
+- Application Layer Support
+- Interoperable DEX
+- Cross-chain support
+- Decentralized AI
+- Fair Resource Distribution
+- Dynamic Block Size
+
+## What is Libonomy SDK?
+
+The Libonomy-SDK gives developers the ability to carry out the development of decentralized applications on top of the blockchain at application level instead of interacting with the blockchain core. SDK provides the ability to create your own blockchains on top of libonomy or interact with other blockchains built on aphelion or other consenssus. SDK also gives the ability to write your own machine learning algorithms and run them directly on aphelion prtocol or libonomy network.
+
+### Features
 
 The Libonomy SDK is the most advanced framework for building custom application-specific blockchains today. Here are a few reasons why you might want to consider building your decentralised application with the Libonomy SDK:
 
--   The default consensus engine available within the SDK is Tendermint Core . Tendermint is the most (and only) mature BFT consensus engine in existence. It is widely used across the industry and is considered the gold standard consensus engine for building Proof-of-Stake systems.
+- EVM And WEB3 Compatibility
+- POS,POW, DPOS, BFT Consensus Support
+- Decentralized AI Support
+- Hybrid Consensus Interaction Channel
+- Custom Blockchain
+- Cross-Chain Integration
+- Extend REST Interface
+- Golang SDK
+- Decentralized Application (dApps) Development
+- Application Level Blockchain Development Support
+- Multi-Language Support
 
--   The SDK is open source and designed to make it easy to build blockchains out of composable modules. As the ecosystem of open source SDK modules grows, it will become increasingly easier to build complex decentralised platforms with it.
+### Getting started with SDK
 
--   The SDK is inspired by capabilities-based security, and informed by years of wrestling with blockchain state-machines. This makes the Libonomy SDK a very secure environment to build blockchains.
-
--   Most importantly, the Libonomy SDK has already been used to build many application-specific blockchains that are already in production. Among others, we can cite Libonomy Hub , IRIS Hub , Binance Chain , Terra or Kava . Many more are building on the Libonomy SDK.
-
-## Getting started with the Libonomy SDK
-
--   Learn more about the architecture of an SDK application
-
--   Learn how to build an application-specific blockchain from scratch with the SDK Tutorial
+- Learn more about the aphelion protocol
+- Learn how to build your own blockchain
+- Learn how to run hybrid chains
+- Learn how to interact with hybrid consensus
