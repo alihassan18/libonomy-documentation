@@ -66,7 +66,7 @@ module.exports = {
                         },
                         {
                             label: "Installation",
-                            to: "/docs/install-go",
+                            to: "/docs/Guide/install-cusp",
                         },
                     ],
                 },

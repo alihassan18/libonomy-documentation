@@ -2,8 +2,8 @@
 sidebar_position: 2
 ---
 # Join the staking network
-
 You can run the daemon service, synchronize with staking layer and interact with the hain through CLI
+> Complete documentation is in progress
 
 :::info Assuming you have already installed cusp, you will be able to carry out the below process system wide.
 The chain that you are trying to connect to should be main-stake unless the development team
@@ -48,4 +48,5 @@ If you want to check the status of your node, run
 ```bash
 cuspd status
 ```
+
 
