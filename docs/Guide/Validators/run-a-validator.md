@@ -23,13 +23,13 @@ On aphelion there are few other rules and regulations for the validators which w
 ### Create Your Validator
 
 You need to have validator public key in order to create a validator which you get when you setup a mainnet node.
-In order to view your public key you can run
+In order to view your public key you can run:
 
 ```bash
 cuspd aphelion show-validator
 ```
 
-You can carry out following steps in order to create a validator
+You can carry out following steps in order to create a validator.
 
 :::info
 LBY denomination is flby where 1 LBY = 1 \* 10^6 flby
@@ -59,11 +59,11 @@ cuspcli tx staking create-validator
 `Min-self-delegation` is a non-negative integer used to specify the minimum amount of self-delegated voting power for your validator.
 :::
 
-In order to verify whether creation of your validator, you can view explorer or use CLI to get the information regarding your validator
+In order to verify creation of your validator, you can view explorer or use CLI to get the information regarding your validator.
 
 ### Confirm Your Validator is Running
 
-Your validator is active if the following command returns anything:
+Your validator is active if the following command returns the information:
 
 ```bash
 cuspcli query aphelion-validator-set | grep "$(cuspd aphelion show-address)"
@@ -75,7 +75,7 @@ In order to appear in validator set you need to posses the minimum voting power 
 
 ## Edit Validator Description
 
-Node operators can also edit the information of their validator. This information can help public to chose their validator on the network and stake their coins to them. When editing the information regarding the validator, input on each flag should be properly provided.
+Node operators can also edit the information of their validator. This information can help public to chose their validator on the network and stake their coins to them. When editing the information regarding the validator, input on each flag should be properly provided:
 
 ```bash
 cuspcli tx staking edit-validator
@@ -107,7 +107,7 @@ cuspcli query staking validator YOUR_BECH32_VALOPER_ADDRESS
 
 ## Unjail Validator
 
-When validator is **_jailed_** for violating the rules of the network, it should submit the unjail transaction from the operator accoutn in order earn rewards again
+When validator is **_jailed_** for violating the rules of the network, it should submit the unjail transaction from the operator accoutn in order earn rewards again:
 
 ```bash
 cuspcli tx slashing unjail 
