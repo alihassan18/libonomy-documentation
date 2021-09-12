@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Setup Validator
+# Setup A Validator
 
 :::info
 Remember that validator functionality falls under staking channel of aphelion where the initial support covers the Dpos+Pbft chains. For this purpose, libonomy development team has added the support for tendermint and other POS variant chains. In order to interact with AI and POW channels this section shouldn't be used.
@@ -12,7 +12,7 @@ Kindly run your mainnet node before creating the validator [Run Mainnet Node](..
 
 ## What is a Validator?
 
-[Validators](./description.md) in POS chains are responsible for commiting/verifying blocks and verify the transactions. In order to become a validator, first the stake needs to be put by which they are able to join the network. Their stakes get slashed if they are unavailble or double sign the block.
+[Validators](./description.md) in POS variant chains are responsible for commiting/verifying blocks and verify the transactions. In order to become a validator, first the stake needs to be put by which they are able to join the network. Their stakes get slashed if they are unavailble or double sign the block.
 
 :::info
 On aphelion there are few other rules and regulations for the validators which we will cover in the regulation section

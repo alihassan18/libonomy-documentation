@@ -2,12 +2,12 @@
 sidebar_position: 2
 ---
 # Join the staking network
-You can run the daemon service, synchronize with staking layer and interact with the hain through CLI
-> :warning: Complete documentation is in progress
+You can run the daemon service, synchronize with staking layer and interact with the hain through CLI.
+> :warning: This documentation is currently under revision. Rest of the sections with complete details will be available soon.
 
 :::info Assuming you have already installed cusp, you will be able to carry out the below process system wide.
-The chain that you are trying to connect to should be main-stake unless the development team
-allows the access to other networking channels of aphelion protocol. On **main-stake** channel only staking related activities are allowed and you will not be able to interact with AI layer and  other hybrid channels of aphelion protocol. If you want to understand aphelion protocol, head over to our [Whitepaper](https://libonomy.com/assets/pdf/white-paper-libonomy-v2.0.pdf)
+The chain that you are trying to connect to should be main-stake unless the development team.
+allows the access to other networking channels of aphelion protocol. On **main-stake** channel only staking related activities are allowed and you will not be able to interact with AI layer and  other hybrid channels of aphelion protocol. If you want to understand aphelion protocol, head over to our [Whitepaper](https://libonomy.com/assets/pdf/white-paper-libonomy-v2.0.pdf) .
 :::
 ## Manual Setup
 
