@@ -12,7 +12,7 @@ Kindly run your mainnet node before creating the validator [Run Mainnet Node](..
 
 ## What is a Validator?
 
-[Validators](./description.md) in POS variant chains are responsible for commiting/verifying blocks and verify the transactions. In order to become a validator, first the stake needs to be put by which they are able to join the network. Their stakes get slashed if they are unavailble or double sign the block.
+Validators in POS variant chains are responsible for commiting/verifying blocks and verify the transactions. In order to become a validator, first the stake needs to be put by which they are able to join the network. Their stakes get slashed if they are unavailble or double sign the block.
 
 :::info
 On aphelion there are few other rules and regulations for the validators which we will cover in the regulation section
