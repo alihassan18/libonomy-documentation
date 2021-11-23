@@ -195,7 +195,7 @@ export default function Home() {
                 img="img/favicon.png">
                 <HomepageHeader />
                 <HomepageFeatures />
-                <SubscribeNow />
+                {/* <SubscribeNow /> */}
             </Layout>
         </>
     );

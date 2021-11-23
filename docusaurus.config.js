@@ -79,7 +79,7 @@ module.exports = {
                     items: [
                         {
                             label: "Discord",
-                            href: "https://discord.com/invite/6P9SX5c",
+                            href: "https://libonomy.com/discord",
                         },
                         {
                             label: "Twitter",

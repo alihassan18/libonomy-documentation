@@ -27,7 +27,7 @@ Libonomy is an AI driven autonomous blockchain with all-around improved performa
 
 ## What is Libonomy SDK?
 
-The Libonomy-SDK gives developers the ability to carry out the development of decentralized applications on top of the blockchain at application level instead of interacting with the blockchain core. SDK provides the ability to create your own blockchains on top of libonomy or interact with other blockchains built on aphelion or other consenssus. SDK also gives the ability to write your own machine learning algorithms and run them directly on aphelion prtocol or libonomy network.
+The Libonomy-SDK gives developers the ability to carry out the development of decentralized applications on top of the blockchain at application level instead of interacting with the blockchain core. SDK provides the ability to create your own blockchains on top of Libonomy or interact with other blockchains built on Aphelion or other consenssus. SDK also gives the ability to write your own machine learning algorithms and run them directly on Aphelion prtocol or Libonomy network.
 
 ### Features
 
@@ -47,7 +47,7 @@ The Libonomy SDK is the most advanced framework for building custom application-
 
 ### Getting started with SDK
 
-- Learn more about the aphelion protocol
+- Learn more about the Aphelion protocol
 - Learn how to build your own blockchain
 - Learn how to run hybrid chains
 - Learn how to interact with hybrid consensus

@@ -7,11 +7,11 @@ You can run the daemon service, synchronize with staking layer and interact with
 
 :::info Assuming you have already installed cusp, you will be able to carry out the below process system wide.
 The chain that you are trying to connect to should be main-stake unless the development team.
-allows the access to other networking channels of aphelion protocol. On **main-stake** channel only staking related activities are allowed and you will not be able to interact with AI layer and  other hybrid channels of aphelion protocol. If you want to understand aphelion protocol, head over to our [Whitepaper](https://libonomy.com/assets/pdf/white-paper-libonomy-v2.0.pdf) .
+allows the access to other networking channels of Aphelion protocol. On **main-stake** channel only staking related activities are allowed and you will not be able to interact with AI layer and  other hybrid channels of Aphelion protocol. If you want to understand Aphelion protocol, head over to our [Whitepaper](https://libonomy.com/assets/pdf/white-paper-libonomy-v2.0.pdf) .
 :::
 ## Manual Setup
 
-For fresh setup of your mainnet node, download the latest **genesis** file of **main-stake** from libonomy github or reach discord and carry out the below process
+For fresh setup of your mainnet node, download the latest **genesis** file of **main-stake** from Libonomy github or reach discord and carry out the below process
 :::info Remember : Checksum for genesis.json is
 
 91e7cab91704c2e88db079a690d3ff3c171e27df17fac38851b298ea651059fc

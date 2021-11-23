@@ -5,7 +5,7 @@ sidebar_position: 1
 # Setup A Validator
 
 :::info
-Remember that validator functionality falls under staking channel of aphelion where the initial support covers the Dpos+Pbft chains. For this purpose, libonomy development team has added the support for tendermint and other POS variant chains. In order to interact with AI and POW channels this section shouldn't be used.
+Remember that validator functionality falls under staking channel of Aphelion where the initial support covers the Dpos+Pbft chains. For this purpose, Libonomy development team has added the support for tendermint and other POS variant chains. In order to interact with AI and POW channels this section shouldn't be used.
 :::
 
 Kindly run your mainnet node before creating the validator [Run Mainnet Node](../Installation/join-staking-network.md) guide.
@@ -15,7 +15,7 @@ Kindly run your mainnet node before creating the validator [Run Mainnet Node](..
 Validators in POS variant chains are responsible for commiting/verifying blocks and verify the transactions. In order to become a validator, first the stake needs to be put by which they are able to join the network. Their stakes get slashed if they are unavailble or double sign the block.
 
 :::info
-On aphelion there are few other rules and regulations for the validators which we will cover in the regulation section
+On Aphelion there are few other rules and regulations for the validators which we will cover in the regulation section
 :::
 
 ## Manual Setup
@@ -50,7 +50,7 @@ cuspcli tx staking create-validator
 
 :::tip
 
-`moniker` is human readable name for your validator by which it can be located on libonomy staking network.
+`moniker` is human readable name for your validator by which it can be located on Libonomy staking network.
 
 `commission-rate` is used to specfy the commision you will charge on the network.
 

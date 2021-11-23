@@ -5,7 +5,7 @@ sidebar_position: 1
 # Install cusp
 
 <!-- Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**. -->
-> In this guide we will explain how to install cusp and participate in **POS** network channel of libonomy.
+> In this guide we will explain how to install cusp and participate in **POS** network channel of Libonomy.
 
 ## Install build requirements
 Start by installing make and gcc binaries
